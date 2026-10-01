@@ -14,7 +14,9 @@ classDiagram
 
     class Menu {
         -items: List~FoodItem~
+        +add_item(item: FoodItem)
         +filter_by_category(category: str) List~FoodItem~
+        +sort_by_popularity() List~FoodItem~
     }
 
     class Transaction {
