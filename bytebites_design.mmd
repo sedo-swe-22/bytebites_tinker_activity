@@ -1,0 +1,28 @@
+classDiagram
+    class Customer {
+        -name: str
+        -purchase_history: List~Transaction~
+        +add_purchase(transaction: Transaction)
+    }
+
+    class FoodItem {
+        -name: str
+        -price: float
+        -category: str
+        -popularity_rating: float
+    }
+
+    class Menu {
+        -items: List~FoodItem~
+        +filter_by_category(category: str) List~FoodItem~
+    }
+
+    class Transaction {
+        -items: List~FoodItem~
+        +add_item(item: FoodItem)
+        +compute_total_cost() float
+    }
+
+    Menu "1" o-- "*" FoodItem : contains
+    Transaction "*" o-- "*" FoodItem : includes
+    Customer "1" o-- "*" Transaction : purchase_history
