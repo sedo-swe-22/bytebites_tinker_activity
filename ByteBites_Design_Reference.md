@@ -12,3 +12,5 @@ in the spec.
 <!-- Write a short set of instructions guiding how your AI assistant should behave 
 when helping with this project — for example, which classes to stay within, 
 what complexity to avoid, or any preferences for how suggestions are structured. -->
+Do not make assumptions, when there is unclear part, ask it instead of assuming.
+Keep it simple. Try to minimize the code change.
